@@ -9,6 +9,10 @@ import { LoginComponent } from './components/login/login.component';
 const routes: Routes = [
   {
     path: '',
+    redirectTo: 'login'
+  },
+  {
+    path: '',
     component: AdminLayoutComponent,
     children: [{
       path: '',
