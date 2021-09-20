@@ -7,33 +7,33 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
-    {
-        path: '',
-        redirectTo: 'login'
-    },
-    {
-        path: '',
-        component: AdminLayoutComponent,
-        children: [{
-            path: '',
-            loadChildren: () => import('./layouts/admin-layout/admin-layout.module').then(m => m.AdminLayoutModule)
-        }]
-    },
-    {
-        path: 'login',
-        component: LoginComponent
-    }
+  {
+    path: '',
+    redirectTo: 'login'
+  },
+  {
+    path: '',
+    component: AdminLayoutComponent,
+    children: [{
+      path: '',
+      loadChildren: () => import('./layouts/admin-layout/admin-layout.module').then(m => m.AdminLayoutModule)
+    }]
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  }
 ];
 
 @NgModule({
-    imports: [
-        CommonModule,
-        BrowserModule,
-        RouterModule.forRoot(routes, {
-            useHash: true
-        })
-    ],
-    exports: [
-    ],
+  imports: [
+    CommonModule,
+    BrowserModule,
+    RouterModule.forRoot(routes, {
+      useHash: true
+    })
+  ],
+  exports: [
+  ],
 })
 export class AppRoutingModule { }
