@@ -9,7 +9,7 @@
                     </div>
                     <div class="card-body">
 
-                        <form [formGroup]="form">
+                        <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
                             <div class="row">
                                 <div class="col-md-6">
                                     <mat-form-field class="example-full-width">
@@ -96,8 +96,8 @@
                                     </div> -->
                             <!--                                </div>-->
                             <!--                            </div>-->
-                            <button mat-raised-button type="button" class="btn btn-danger pull-right"
-                                [disabled]="!form.valid" (click)="onSubmit(form.value)">Update Profile
+                            <button mat-raised-button type="submit" class="btn btn-danger pull-right"
+                                [disabled]="form.invalid">Update Profile
                             </button>
                             <div class="clearfix"></div>
                         </form>

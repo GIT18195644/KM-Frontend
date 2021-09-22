@@ -71,9 +71,9 @@ export class UserProfileComponent implements OnInit {
     });
   }
 
-  public onSubmit(values): void {
+  public onSubmit(value: any): void {
     debugger;
-    // this.profileService.updateLoggedInUserDetails(values).subscribe(data => {
+    // this.profileService.updateLoggedInUserDetails(value).subscribe(data => {
     //   if (this.profileService.updateProfileData.IsSuccess) {
     //     this.fetch();
     //     this.ProfileUpdateSuccess();
@@ -82,7 +82,7 @@ export class UserProfileComponent implements OnInit {
     //     this.ProfileUpdateFail();
     //   }
     // })
-    console.log("Data: " + values);
+    console.log(value);
   }
 
   ProfileUpdateSuccess() {
