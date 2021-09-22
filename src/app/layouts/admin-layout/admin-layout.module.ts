@@ -17,6 +17,9 @@ import {MatRippleModule} from '@angular/material/core';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
+import {ChangePasswordDialogBoxComponent} from '../../user-profile/change-password/change-password-dialog-box.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   imports: [
@@ -30,6 +33,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatInputModule,
     MatSelectModule,
     MatTooltipModule,
+    MatIconModule,
+    MatDialogModule,
   ],
   declarations: [
     DashboardComponent,
@@ -40,6 +45,7 @@ import {MatSelectModule} from '@angular/material/select';
     MapsComponent,
     NotificationsComponent,
     UpgradeComponent,
+    ChangePasswordDialogBoxComponent,
   ]
 })
 
