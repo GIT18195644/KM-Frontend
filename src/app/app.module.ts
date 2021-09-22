@@ -19,6 +19,7 @@ import { NotificationsComponent } from './notifications/notifications.component'
 import { UpgradeComponent } from './upgrade/upgrade.component';
 
 import { LoginService } from './shared/Services/login.service';
+import { UserProfileService } from './shared/Services/user-profile.service';
 
 import {
   AgmCoreModule
@@ -47,7 +48,10 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     AdminLayoutComponent,
 
   ],
-  providers: [LoginService],
+  providers: [
+    LoginService,
+    UserProfileService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
