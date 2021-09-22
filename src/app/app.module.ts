@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { ToastrModule } from 'ngx-toastr';
+import { MaterialFileInputModule } from 'ngx-material-file-input';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 
@@ -20,6 +21,7 @@ import { UpgradeComponent } from './upgrade/upgrade.component';
 
 import { LoginService } from './shared/Services/login.service';
 import { UserProfileService } from './shared/Services/user-profile.service';
+import { SharePointService } from './shared/Services/share-point.service';
 
 import {
   AgmCoreModule
@@ -37,6 +39,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
       positionClass: 'toast-bottom-right',
       preventDuplicates: false
     }),
+    MaterialFileInputModule,
     RouterModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
@@ -45,12 +48,12 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
   ],
   declarations: [
     AppComponent,
-    AdminLayoutComponent,
-
+    AdminLayoutComponent
   ],
   providers: [
     LoginService,
-    UserProfileService
+    UserProfileService,
+    SharePointService
   ],
   bootstrap: [AppComponent]
 })

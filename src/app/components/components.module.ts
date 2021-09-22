@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MaterialFileInputModule } from 'ngx-material-file-input';
 
 @NgModule({
   imports: [
@@ -23,6 +24,7 @@ import { MatButtonModule } from '@angular/material/button';
       positionClass: 'toast-bottom-right',
       preventDuplicates: false
     }),
+    MaterialFileInputModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,

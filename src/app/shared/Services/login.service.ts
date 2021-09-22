@@ -12,6 +12,7 @@ export class LoginService {
     public userResponse: any;
     public logout_message: any;
     public userID: any;
+    public userRoles: any;
 
     protected httpOptions = {
         headers: new HttpHeaders({
@@ -36,6 +37,15 @@ export class LoginService {
         return this.http.get(this.myAppUrl + 'Account/logout')
             .pipe(map((result: Response) =>
                 this.logout_message = result.json()),
+                catchError(this.errorHandler)
+            );
+    }
+
+    public getAllUserRoles() {
+        return this.http.get(this.myAppUrl + "Users/getAllUserRoles")
+            .pipe((map((res: Response) => {
+                this.userRoles = res
+            })),
                 catchError(this.errorHandler)
             );
     }
