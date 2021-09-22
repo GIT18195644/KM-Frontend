@@ -87,6 +87,5 @@ export class LoginComponent {
 
     openSnackBarSuccess() {
         this.toastr.success("Login", 'Success');
-      }
+    }
 }
-

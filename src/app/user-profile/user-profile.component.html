@@ -14,13 +14,13 @@
                                 <div class="col-md-6">
                                     <mat-form-field class="example-full-width">
                                         <input matInput placeholder="Company" formControlName="ctrlcompany" type="text"
-                                            [(ngModel)]="Company" readonly>
+                                               [(ngModel)]="Company" readonly>
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-6">
                                     <mat-form-field class="example-full-width">
                                         <input matInput placeholder="Username" formControlName="ctrluserName"
-                                            type="text" [(ngModel)]="UserName" readonly>
+                                               type="text" [(ngModel)]="UserName" readonly>
                                     </mat-form-field>
                                 </div>
                             </div>
@@ -28,13 +28,13 @@
                                 <div class="col-md-4">
                                     <mat-form-field class="example-full-width">
                                         <input matInput placeholder="User Role" formControlName="ctrlrole" type="text"
-                                            [(ngModel)]="UserRole" readonly>
+                                               [(ngModel)]="UserRole" readonly>
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-8">
                                     <mat-form-field class="example-full-width">
                                         <input matInput placeholder="Email address" formControlName="ctrlemail"
-                                            type="email" [(ngModel)]="Email" required>
+                                               type="email" [(ngModel)]="Email" required>
                                     </mat-form-field>
                                 </div>
                             </div>
@@ -42,13 +42,13 @@
                                 <div class="col-md-6">
                                     <mat-form-field class="example-full-width">
                                         <input matInput placeholder="Name" formControlName="ctrlName" type="text"
-                                            [(ngModel)]="Name" required>
+                                               [(ngModel)]="Name" required>
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-6">
                                     <mat-form-field class="example-full-width">
                                         <input matInput placeholder="Surname" formControlName="ctrlSurname" type="text"
-                                            [(ngModel)]="Surname">
+                                               [(ngModel)]="Surname">
                                     </mat-form-field>
                                 </div>
                             </div>
@@ -56,7 +56,7 @@
                                 <div class="col-md-12">
                                     <mat-form-field class="example-full-width">
                                         <input matInput placeholder="Address" formControlName="ctrladdress" type="text"
-                                            [(ngModel)]="Address" required>
+                                               [(ngModel)]="Address" required>
                                     </mat-form-field>
                                 </div>
                             </div>
@@ -64,19 +64,19 @@
                                 <div class="col-md-4">
                                     <mat-form-field class="example-full-width">
                                         <input matInput placeholder="Gender" formControlName="ctrlsex" type="text"
-                                            [(ngModel)]="Gender" required>
+                                               [(ngModel)]="Gender" required>
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-4">
                                     <mat-form-field class="example-full-width">
                                         <input matInput placeholder="Birthday" formControlName="ctrlbod" type="date"
-                                            [(ngModel)]="Birthday" required>
+                                               [(ngModel)]="Birthday" required>
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-4">
                                     <mat-form-field class="example-full-width">
                                         <input matInput placeholder="Phone" formControlName="ctrlphone" type="number"
-                                            [(ngModel)]="Phone" required>
+                                               [(ngModel)]="Phone" required>
                                     </mat-form-field>
                                 </div>
                             </div>
@@ -97,11 +97,16 @@
                             <!--                                </div>-->
                             <!--                            </div>-->
                             <button mat-raised-button type="submit" class="btn btn-danger pull-right"
-                                [disabled]="form.invalid">Update Profile
+                                    [disabled]="form.invalid">Update Profile
                             </button>
                             <div class="clearfix"></div>
                         </form>
-
+                        <button (click)="onChangePassword()"
+                                mat-raised-button
+                                type="button"
+                                class="btn btn-primary pull-left">
+                            change password
+                        </button>
                     </div>
                 </div>
             </div>

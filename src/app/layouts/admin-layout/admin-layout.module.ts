@@ -11,14 +11,15 @@ import { IconsComponent } from '../../icons/icons.component';
 import { MapsComponent } from '../../maps/maps.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
-import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
-import { MatRippleModule } from '@angular/material/core';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatSelectModule } from '@angular/material/select';
-import { MaterialFileInputModule } from 'ngx-material-file-input';
-
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {MatRippleModule} from '@angular/material/core';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatSelectModule} from '@angular/material/select';
+import {ChangePasswordDialogBoxComponent} from '../../user-profile/change-password/change-password-dialog-box.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   imports: [
@@ -32,7 +33,8 @@ import { MaterialFileInputModule } from 'ngx-material-file-input';
     MatInputModule,
     MatSelectModule,
     MatTooltipModule,
-    MaterialFileInputModule
+    MatIconModule,
+    MatDialogModule,
   ],
   declarations: [
     DashboardComponent,
@@ -43,6 +45,7 @@ import { MaterialFileInputModule } from 'ngx-material-file-input';
     MapsComponent,
     NotificationsComponent,
     UpgradeComponent,
+    ChangePasswordDialogBoxComponent,
   ]
 })
 
