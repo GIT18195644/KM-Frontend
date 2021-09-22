@@ -35,15 +35,15 @@ export class UserProfileService {
 
     // Update LoggedIn User Data
     updateLoggedInUserDetails(userProfileData) {
-        this.profileData.Company = userProfileData.Company;
-        this.profileData.UserName = userProfileData.UserName;
-        this.profileData.Email = userProfileData.Email;
-        this.profileData.Name = userProfileData.Name;
-        this.profileData.SurName = userProfileData.Surname;
-        this.profileData.Address = userProfileData.Address;
-        this.profileData.Gender = userProfileData.Gender;
-        this.profileData.Birthday = userProfileData.Birthday;
-        this.profileData.Phone = userProfileData.Phone;
+        this.profileData.Company = userProfileData.ctrlcompany;
+        this.profileData.UserName = userProfileData.ctrluserName;
+        this.profileData.Email = userProfileData.ctrlemail;
+        this.profileData.Name = userProfileData.ctrlName;
+        this.profileData.SurName = userProfileData.ctrlSurname;
+        this.profileData.Address = userProfileData.ctrladdress;
+        this.profileData.Gender = userProfileData.ctrlsex;
+        this.profileData.Birthday = userProfileData.ctrlbod;
+        this.profileData.Phone = userProfileData.ctrlphone;
 
         return this.http.put(this.myAppUrl + 'UserProfile/updateLoggedInUserDetails/', this.profileData)
             .pipe(map(res => {

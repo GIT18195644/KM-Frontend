@@ -73,15 +73,15 @@ export class UserProfileComponent implements OnInit {
 
   public onSubmit(value: any): void {
     debugger;
-    // this.profileService.updateLoggedInUserDetails(value).subscribe(data => {
-    //   if (this.profileService.updateProfileData.IsSuccess) {
-    //     this.fetch();
-    //     this.ProfileUpdateSuccess();
-    //   } else {
-    //     this.fetch();
-    //     this.ProfileUpdateFail();
-    //   }
-    // })
+    this.profileService.updateLoggedInUserDetails(value).subscribe(data => {
+      if (this.profileService.updateProfileData.IsSuccess) {
+        this.fetch();
+        this.ProfileUpdateSuccess();
+      } else {
+        this.fetch();
+        this.ProfileUpdateFail();
+      }
+    })
     console.log(value);
   }
 
