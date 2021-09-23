@@ -11,6 +11,7 @@ import { SharePointService } from '../shared/Services/share-point.service';
 })
 export class TypographyComponent implements OnInit {
   rows = [];
+  formData = [];
 
   public form: FormGroup;
   public role: any;
@@ -61,14 +62,14 @@ export class TypographyComponent implements OnInit {
   }
 
   public onSubmit(value: any): void {
-    console.log("Data1: " + value)
+    this.formData = value;
     this.sharepointService.upload(this.spFile).subscribe(
       (event: any) => {
         if (typeof (event) === 'object') {
           this.docLink = event.link;
           this.FileUploadSuccess();
           // console.log("Link: " + this.docLink);
-          this.ShareData(value);
+          this.ShareData(this.formData);
         } else {
           this.FileUploadFailed();
         }
