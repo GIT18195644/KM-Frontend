@@ -1,5 +1,6 @@
 <div class="main-content">
     <div class="container-fluid">
+
         <div class="card">
             <div class="card-header card-header-danger">
                 <h4 class="card-title">Share Point</h4>
@@ -16,15 +17,17 @@
                                 <div class="row">
                                     <div class="col-md-8">
                                         <mat-form-field class="example-full-width">
-                                            <input matInput placeholder="Topic" formControlName="ctrltopic" type="text"
-                                                required>
+                                            <input matInput placeholder="Topic" formControlName="ctrltopic"
+                                                   type="text"
+                                                   required>
                                         </mat-form-field>
                                     </div>
                                     <div class="col-md-4" *ngIf="role == 'KM Admin'">
                                         <mat-form-field class="example-full-width">
-                                            <mat-select placeholder="Select Role" formControlName="ctrlrole" required>
+                                            <mat-select placeholder="Select Role" formControlName="ctrlrole"
+                                                        required>
                                                 <mat-option *ngFor="let row of rows" [value]="row.Name"
-                                                    (click)="selectInput(row.Name)">
+                                                            (click)="selectInput(row.Name)">
                                                     {{ row.Name }}
                                                 </mat-option>
                                             </mat-select>
@@ -33,7 +36,7 @@
                                     <div class="col-md-4" *ngIf="role != 'KM Admin'">
                                         <mat-form-field class="example-full-width">
                                             <input matInput placeholder="Select Role" formControlName="ctrlrole"
-                                                type="text" value={{role}} required disabled>
+                                                   type="text" value={{role}} required disabled>
                                         </mat-form-field>
                                     </div>
                                 </div>
@@ -41,7 +44,7 @@
                                     <div class="col-md-12">
                                         <mat-form-field class="example-full-width">
                                             <input matInput placeholder="Abstract" formControlName="ctrlabstract"
-                                                type="text" required>
+                                                   type="text" required>
                                         </mat-form-field>
                                     </div>
                                 </div>
@@ -62,16 +65,85 @@
                                     </div> -->
                                     <div class="col-md-12">
                                         <input class="form-control" formControlName="ctrlattachedfile" type="file"
-                                            (change)="onChange($event)">
+                                               (change)="onChange($event)">
                                     </div>
                                 </div>
                                 <button mat-raised-button type="submit" class="btn btn-danger pull-right"
-                                    [disabled]="form.invalid">Share Data</button>
+                                        [disabled]="form.invalid">Share Data
+                                </button>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title">Stream Point</h4>
+                <p class="card-category">Knowledge Sharing Portal</p>
+            </div>
+            <div class="card-body">
+                <div id="stream">
+                    <div class="card-title">
+                        <h2>My Stream Point</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <mat-form-field class="example-full-width">
+                                            <input matInput placeholder="Topic" formControlName="ctrltopic"
+                                                   type="text"
+                                                   required>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-4" *ngIf="role == 'KM Admin'">
+                                        <mat-form-field class="example-full-width">
+                                            <mat-select placeholder="Select Role"
+                                                        required>
+                                                <mat-option *ngFor="let row of rows" [value]="row.Name"
+                                                            (click)="selectInput(row.Name)">
+                                                    {{ row.Name }}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-4" *ngIf="role != 'KM Admin'">
+                                        <mat-form-field class="example-full-width">
+                                            <input matInput placeholder="Select Role"
+                                                   type="text" value={{role}} required disabled>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <mat-form-field class="example-full-width">
+                                            <input matInput placeholder="Abstract"
+                                                   type="text" required>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <mat-form-field class="example-full-width">
+                                            <input matInput placeholder="link"
+                                                   type="text" required>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <button mat-raised-button type="submit" class="btn btn-danger pull-right"
+                                        [disabled]="form.invalid">Share Data
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
