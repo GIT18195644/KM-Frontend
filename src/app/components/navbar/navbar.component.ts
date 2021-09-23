@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
-import { ROUTES } from '../sidebar/sidebar.component';
+import { ROUTES1, ROUTES2 } from '../sidebar/sidebar.component';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
@@ -15,6 +15,7 @@ export class NavbarComponent implements OnInit {
     mobile_menu_visible: any = 0;
     private toggleButton: any;
     private sidebarVisible: boolean;
+    public role: any;
 
     constructor(private toastr: ToastrService, location: Location, private element: ElementRef, private router: Router) {
         this.location = location;
@@ -22,17 +23,34 @@ export class NavbarComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.listTitles = ROUTES.filter(listTitle => listTitle);
-        const navbar: HTMLElement = this.element.nativeElement;
-        this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
-        this.router.events.subscribe((event) => {
-            this.sidebarClose();
-            var $layer: any = document.getElementsByClassName('close-layer')[0];
-            if ($layer) {
-                $layer.remove();
-                this.mobile_menu_visible = 0;
-            }
-        });
+        this.role = localStorage.getItem('UserRole');
+
+        if (this.role == 'KM Admin') {
+            this.listTitles = ROUTES1.filter(listTitle => listTitle);
+            const navbar: HTMLElement = this.element.nativeElement;
+            this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
+            this.router.events.subscribe((event) => {
+                this.sidebarClose();
+                var $layer: any = document.getElementsByClassName('close-layer')[0];
+                if ($layer) {
+                    $layer.remove();
+                    this.mobile_menu_visible = 0;
+                }
+            });
+        } else {
+            this.listTitles = ROUTES2.filter(listTitle => listTitle);
+            const navbar: HTMLElement = this.element.nativeElement;
+            this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
+            this.router.events.subscribe((event) => {
+                this.sidebarClose();
+                var $layer: any = document.getElementsByClassName('close-layer')[0];
+                if ($layer) {
+                    $layer.remove();
+                    this.mobile_menu_visible = 0;
+                }
+            });
+        }
+
     }
 
     sidebarOpen() {

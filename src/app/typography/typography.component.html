@@ -32,8 +32,8 @@
                                     </div>
                                     <div class="col-md-4" *ngIf="role != 'KM Admin'">
                                         <mat-form-field class="example-full-width">
-                                            <input matInput placeholder="Select Role" formControlName="ctrlrole"
-                                                type="text" value={{role}} required disabled>
+                                            <input matInput placeholder="Role Type" formControlName="ctrlrole"
+                                                type="text" [(ngModel)]="role" required readonly>
                                         </mat-form-field>
                                     </div>
                                 </div>
