@@ -17,9 +17,4 @@ export class AddUserDialogBoxComponent implements OnInit {
     ngOnInit(): void {
     }
 
-    onChangePassword() {
-    }
-
-    onAddUser() {
-    }
 }
