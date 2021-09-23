@@ -1,21 +1,33 @@
-MIT License
+[comment]: <> (MIT License)
 
-Copyright (c) 2017 Creative Tim (www.creative-tim.com)
+[comment]: <> (Copyright &#40;c&#41; 2017 Creative Tim &#40;www.creative-tim.com&#41;)
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+[comment]: <> (Permission is hereby granted, free of charge, to any person obtaining a copy)
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+[comment]: <> (of this software and associated documentation files &#40;the "Software"&#41;, to deal)
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+[comment]: <> (in the Software without restriction, including without limitation the rights)
+
+[comment]: <> (to use, copy, modify, merge, publish, distribute, sublicense, and/or sell)
+
+[comment]: <> (copies of the Software, and to permit persons to whom the Software is)
+
+[comment]: <> (furnished to do so, subject to the following conditions:)
+
+[comment]: <> (The above copyright notice and this permission notice shall be included in all)
+
+[comment]: <> (copies or substantial portions of the Software.)
+
+[comment]: <> (THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR)
+
+[comment]: <> (IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,)
+
+[comment]: <> (FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE)
+
+[comment]: <> (AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER)
+
+[comment]: <> (LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,)
+
+[comment]: <> (OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE)
+
+[comment]: <> (SOFTWARE.)
