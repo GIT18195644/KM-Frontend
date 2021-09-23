@@ -9,6 +9,7 @@ import { URLs } from './urls';
 export class UserProfileService {
     public userProfile: any;
     public updateProfileData: any;
+    public AllUsers: any;
 
     profileData: UserProfile = new UserProfile();
     myAppUrl: string = new URLs().APIURL;
@@ -49,6 +50,13 @@ export class UserProfileService {
             .pipe(map(res => {
                 this.updateProfileData = res;
             }));
+    }
+
+    getAllUsers() {
+        return this.http.get(this.myAppUrl + "UserProfile/getAllUsers")
+            .pipe(map((res: Response) =>
+                this.AllUsers = res
+            ));
     }
 
     errorHandler(error: Response) {

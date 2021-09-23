@@ -3,11 +3,7 @@
 
         <div class="row">
             <div class="m-3">
-                <button
-                        (click)="onAddUser()"
-                        mat-raised-button
-                        type="submit"
-                        class="btn btn-danger">
+                <button (click)="onAddUser()" mat-raised-button type="submit" class="btn btn-danger">
                     Add User
                 </button>
             </div>
@@ -17,28 +13,70 @@
                         <h4 class="card-title">Employee Stats</h4>
                     </div>
                     <div class="card-body table-responsive">
-                        <table class="table table-hover">
-                            <thead class="text-warning">
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Address</th>
-                            <th>Email</th>
-                            <th>Gender</th>
-                            <th>Phone</th>
-                            <th>User Role</th>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Dinuka</td>
-                                <td>115A</td>
-                                <td>din@gmail.com</td>
-                                <td>male</td>
-                                <td>071452586</td>
-                                <td>KM Admin</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                        <ngx-datatable #myTable class="material" class="material" [headerHeight]="50" [limit]="10"
+                            [columnMode]="'force'" [footerHeight]="50" [rowHeight]="'75'" [rows]="rows"
+                            [sorts]="[{prop: 'name', dir: 'desc'}]">
+                            <!-- <ngx-datatable-column name="Doc Id" [width]="20">
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    {{row.Id}}
+                                </ng-template>
+                            </ngx-datatable-column> -->
+                            <ngx-datatable-column name="User Name">
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    {{row.UserName}}
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="User Role">
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    {{row.UserRole}}
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="Email">
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    {{row.Email}}
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="Full Name">
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    {{row.Name}} {{row.Surname}}
+                                </ng-template>
+                            </ngx-datatable-column>>
+                            <ngx-datatable-column name="BOD">
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    {{row.Birthday}}
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="Gender">
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    <a *ngIf="row.Gender == 'male'">M</a>
+                                    <a *ngIf="row.Gender == 'female'">F</a>
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="Company">
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    {{row.Company}}
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="Phone">
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    {{row.Phone}}
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="Active Status">
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    <span *ngIf="row.isActive != 1" class="badge badge-danger">Active</span>
+                                    <span *ngIf="row.isActive == 1" class="badge badge-dark">Inactive</span>
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column>
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    <!-- <span *ngIf="row.isDeleted == 1" class="badge badge-dark">Block</span> -->
+                                    <a *ngIf="row.isActive != 1" (click)="DeleteUser(row)">
+                                        <button type="button" class="btn btn-sm btn-danger">Delete</button>
+                                    </a>
+                                </ng-template>
+                            </ngx-datatable-column>
+                        </ngx-datatable>
                     </div>
                 </div>
             </div>

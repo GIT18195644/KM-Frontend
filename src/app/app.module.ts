@@ -7,6 +7,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { MaterialFileInputModule } from 'ngx-material-file-input';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 import { AppComponent } from './app.component';
 
@@ -40,6 +41,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
       positionClass: 'toast-bottom-right',
       preventDuplicates: false
     }),
+    NgxDatatableModule,
     MaterialFileInputModule,
     RouterModule,
     AppRoutingModule,

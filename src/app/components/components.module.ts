@@ -12,6 +12,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MaterialFileInputModule } from 'ngx-material-file-input';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+
 
 @NgModule({
   imports: [
@@ -25,6 +27,7 @@ import { MaterialFileInputModule } from 'ngx-material-file-input';
       preventDuplicates: false
     }),
     MaterialFileInputModule,
+    NgxDatatableModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,

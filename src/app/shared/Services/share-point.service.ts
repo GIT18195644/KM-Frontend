@@ -12,6 +12,7 @@ export class SharePointService {
     fileUploadUrl: string = new URLs().FILEAPIURL;
 
     fileData: SharePoint = new SharePoint();
+    public SharedFiles: any;
 
     protected httpOptions = {
         headers: new HttpHeaders({
@@ -44,6 +45,13 @@ export class SharePointService {
                 res),
                 catchError(this.errorHandler)
             );
+    }
+
+    getAllSharedFiles(user) {
+        return this.http.get(this.myAppUrl + "ShareFiles/getAllSharedFiles/" + user)
+            .pipe(map((res: Response) =>
+                this.SharedFiles = res
+            ));
     }
 
     errorHandler(error: Response) {

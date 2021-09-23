@@ -22,6 +22,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatDialogModule} from '@angular/material/dialog';
 import {UserComponent} from '../../user/user.component';
 import {AddUserDialogBoxComponent} from '../../user/add-user/add-user-dialog-box.component';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+
 
 @NgModule({
     imports: [
@@ -32,6 +34,7 @@ import {AddUserDialogBoxComponent} from '../../user/add-user/add-user-dialog-box
         MatButtonModule,
         MatRippleModule,
         MatFormFieldModule,
+        NgxDatatableModule,
         MatInputModule,
         MatSelectModule,
         MatTooltipModule,
