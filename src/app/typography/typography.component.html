@@ -1,6 +1,5 @@
 <div class="main-content">
     <div class="container-fluid">
-
         <div class="card">
             <div class="card-header card-header-danger">
                 <h4 class="card-title">Share Point</h4>
@@ -27,7 +26,7 @@
                                             <mat-select placeholder="Select Role" formControlName="ctrlrole"
                                                         required>
                                                 <mat-option *ngFor="let row of rows" [value]="row.Name"
-                                                            (click)="selectInput(row.Name)">
+                                                    (click)="selectInput(row.Name)">
                                                     {{ row.Name }}
                                                 </mat-option>
                                             </mat-select>
@@ -35,8 +34,8 @@
                                     </div>
                                     <div class="col-md-4" *ngIf="role != 'KM Admin'">
                                         <mat-form-field class="example-full-width">
-                                            <input matInput placeholder="Select Role" formControlName="ctrlrole"
-                                                   type="text" value={{role}} required disabled>
+                                            <input matInput placeholder="Role Type" formControlName="ctrlrole"
+                                                type="text" [(ngModel)]="role" required readonly>
                                         </mat-form-field>
                                     </div>
                                 </div>
@@ -44,7 +43,7 @@
                                     <div class="col-md-12">
                                         <mat-form-field class="example-full-width">
                                             <input matInput placeholder="Abstract" formControlName="ctrlabstract"
-                                                   type="text" required>
+                                                type="text" required>
                                         </mat-form-field>
                                     </div>
                                 </div>
@@ -65,7 +64,7 @@
                                     </div> -->
                                     <div class="col-md-12">
                                         <input class="form-control" formControlName="ctrlattachedfile" type="file"
-                                               (change)="onChange($event)">
+                                            (change)="onChange($event)">
                                     </div>
                                 </div>
                                 <button mat-raised-button type="submit" class="btn btn-danger pull-right"
@@ -144,6 +143,5 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>

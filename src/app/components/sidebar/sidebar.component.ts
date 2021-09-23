@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 declare const $: any;
 
@@ -9,11 +9,11 @@ declare interface RouteInfo {
     class: string;
 }
 
-export const ROUTES: RouteInfo[] = [
-    {path: '/user-profile', title: 'User Profile', icon: 'person', class: ''},
-    {path: '/dashboard', title: 'Dashboard', icon: 'dashboard', class: ''},
-    {path: '/documents', title: 'Documents', icon: 'library_books', class: ''},
-    {path: '/user', title: 'Users', icon: 'content_paste', class: ''},
+export const ROUTES1: RouteInfo[] = [
+    { path: '/user-profile', title: 'User Profile', icon: 'person', class: '' },
+    { path: '/dashboard', title: 'Dashboard', icon: 'dashboard', class: '' },
+    { path: '/documents', title: 'Share Point', icon: 'library_books', class: '' },
+    { path: '/user', title: 'Users', icon: 'content_paste', class: '' },
 
     // { path: '/table-list', title: 'Table List',  icon:'content_paste', class: '' },
     // { path: '/typography', title: 'Typography',  icon:'library_books', class: '' },
@@ -21,6 +21,12 @@ export const ROUTES: RouteInfo[] = [
     // { path: '/maps', title: 'Maps',  icon:'location_on', class: '' },
     // { path: '/notifications', title: 'Notifications',  icon:'notifications', class: '' },
     // { path: '/upgrade', title: 'Upgrade to PRO',  icon:'unarchive', class: 'active-pro' },
+];
+
+export const ROUTES2: RouteInfo[] = [
+    { path: '/user-profile', title: 'User Profile', icon: 'person', class: '' },
+    { path: '/dashboard', title: 'Dashboard', icon: 'dashboard', class: '' },
+    { path: '/documents', title: 'Share Point', icon: 'library_books', class: '' },
 ];
 
 @Component({
@@ -31,11 +37,19 @@ export const ROUTES: RouteInfo[] = [
 export class SidebarComponent implements OnInit {
     menuItems: any[];
 
+    public role: any;
+
     constructor() {
     }
 
     ngOnInit() {
-        this.menuItems = ROUTES.filter(menuItem => menuItem);
+        this.role = localStorage.getItem('UserRole');
+
+        if (this.role == 'KM Admin') {
+            this.menuItems = ROUTES1.filter(menuItem => menuItem);
+        } else {
+            this.menuItems = ROUTES2.filter(menuItem => menuItem);
+        }
     }
 
     isMobileMenu() {
