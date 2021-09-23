@@ -102,7 +102,7 @@ export class UserProfileComponent implements OnInit {
     onChangePassword() {
       const matDialogRef = this.dialog.open(ChangePasswordDialogBoxComponent, {
         width: '300px',
-        data: {}
+        // data: {}
       });
     }
 }
