@@ -20,7 +20,7 @@
                                                 required>
                                         </mat-form-field>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-4" *ngIf="role == 'KM Admin'">
                                         <mat-form-field class="example-full-width">
                                             <mat-select placeholder="Select Role" formControlName="ctrlrole" required>
                                                 <mat-option *ngFor="let row of rows" [value]="row.Name"
@@ -28,6 +28,12 @@
                                                     {{ row.Name }}
                                                 </mat-option>
                                             </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-4" *ngIf="role != 'KM Admin'">
+                                        <mat-form-field class="example-full-width">
+                                            <input matInput placeholder="Select Role" formControlName="ctrlrole"
+                                                type="text" value={{role}} required disabled>
                                         </mat-form-field>
                                     </div>
                                 </div>
@@ -60,7 +66,7 @@
                                     </div>
                                 </div>
                                 <button mat-raised-button type="submit" class="btn btn-danger pull-right"
-                                >Share Data</button>
+                                    [disabled]="form.invalid">Share Data</button>
                             </form>
                         </div>
                     </div>
