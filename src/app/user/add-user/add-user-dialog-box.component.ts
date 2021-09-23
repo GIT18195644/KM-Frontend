@@ -8,6 +8,7 @@ import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
     styleUrls: ['./add-user-dialog-box.component.css']
 })
 export class AddUserDialogBoxComponent implements OnInit {
+    addUserForm: FormGroup;
 
     constructor(private dialogRef: MatDialogRef<AddUserDialogBoxComponent>,
                 @Inject(MAT_DIALOG_DATA) public data ) {
@@ -17,5 +18,8 @@ export class AddUserDialogBoxComponent implements OnInit {
     }
 
     onChangePassword() {
+    }
+
+    onAddUser() {
     }
 }
