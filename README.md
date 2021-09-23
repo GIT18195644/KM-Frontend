@@ -1,248 +1,390 @@
-# [Material Dashboard Angular - Free Bootstrap Material Design Admin](https://www.creative-tim.com/product/material-dashboard-angular2)[![version][version-badge]][CHANGELOG]
+[comment]: <> (# [Material Dashboard Angular - Free Bootstrap Material Design Admin]&#40;https://www.creative-tim.com/product/material-dashboard-angular2&#41;[![version][version-badge]][CHANGELOG])
 
-![Product Gif](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-dashboard-angular/material-dashboard-angular.gif)
+[comment]: <> (![Product Gif]&#40;https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-dashboard-angular/material-dashboard-angular.gif&#41;)
 
-**[Material Dashboard Angular](https://www.creative-tim.com/product/material-dashboard-angular2/)** is a free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design. We are very excited to introduce our take on the material concepts through an easy to use and beautiful set of components. Material Dashboard was built over the popular Bootstrap framework and it comes with a couple of third-party plugins redesigned to fit in with the rest of the elements.
+[comment]: <> (**[Material Dashboard Angular]&#40;https://www.creative-tim.com/product/material-dashboard-angular2/&#41;** is a free Material Bootstrap Admin with a fresh, new design inspired by Google's Material Design. We are very excited to introduce our take on the material concepts through an easy to use and beautiful set of components. Material Dashboard was built over the popular Bootstrap framework and it comes with a couple of third-party plugins redesigned to fit in with the rest of the elements.)
 
-Material Dashboard makes use of light, surface and movement. The general layout resembles sheets of paper following multiple different layers, so that the depth and order is obvious. The navigation stays mainly on the left sidebar and the content is on the right inside the main panel.
+[comment]: <> (Material Dashboard makes use of light, surface and movement. The general layout resembles sheets of paper following multiple different layers, so that the depth and order is obvious. The navigation stays mainly on the left sidebar and the content is on the right inside the main panel.)
 
-This product came as a result of users asking for a material dashboard after we released our successful [Material Kit](http://www.creative-tim.com/product/material-kit). We developed it based on your feedback and it is a powerful bootstrap admin dashboard, which allows you to build products like admin panels, content managements systems and CRMs.
+[comment]: <> (This product came as a result of users asking for a material dashboard after we released our successful [Material Kit]&#40;http://www.creative-tim.com/product/material-kit&#41;. We developed it based on your feedback and it is a powerful bootstrap admin dashboard, which allows you to build products like admin panels, content managements systems and CRMs.)
 
-Material Dashboard comes with 5 color filter choices for both the sidebar and the card headers (blue, green, orange, red and purple) and an option to have a background image on the sidebar.
+[comment]: <> (Material Dashboard comes with 5 color filter choices for both the sidebar and the card headers &#40;blue, green, orange, red and purple&#41; and an option to have a background image on the sidebar.)
 
-Material Dashboard uses a framework built by our friend [Federico - Bootstrap Material Design](http://fezvrasta.github.io/bootstrap-material-design/), who did an amazing job creating the backbone for the material effects, animations, ripples and transitions. Big thanks to his team for the effort and forward thinking they put into it.
+[comment]: <> (Material Dashboard uses a framework built by our friend [Federico - Bootstrap Material Design]&#40;http://fezvrasta.github.io/bootstrap-material-design/&#41;, who did an amazing job creating the backbone for the material effects, animations, ripples and transitions. Big thanks to his team for the effort and forward thinking they put into it.)
 
-Special thanks go to:
-[Robert McIntosh](https://github.com/mouse0270/bootstrap-notify) for the notification system.
-[Chartist](https://gionkunz.github.io/chartist-js/) for the wonderful charts.
-We are very excited to share this dashboard with you and we look forward to hearing your feedback!
+[comment]: <> (Special thanks go to:)
 
-You can find the Github Repo here.
+[comment]: <> ([Robert McIntosh]&#40;https://github.com/mouse0270/bootstrap-notify&#41; for the notification system.)
 
-## Table of Contents
+[comment]: <> ([Chartist]&#40;https://gionkunz.github.io/chartist-js/&#41; for the wonderful charts.)
 
-* [Versions](#versions)
-* [Demo](#demo)
-* [Quick Start](#quick-start)
-* [Documentation](#documentation)
-* [File Structure](#file-structure)
-* [Browser Support](#browser-support)
-* [Resources](#resources)
-* [Reporting Issues](#reporting-issues)
-* [Technical Support or Questions](#technical-support-or-questions)
-* [Licensing](#licensing)
-* [Useful Links](#useful-links)
+[comment]: <> (We are very excited to share this dashboard with you and we look forward to hearing your feedback!)
 
+[comment]: <> (You can find the Github Repo here.)
 
-## Versions
+[comment]: <> (## Table of Contents)
 
-[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/html-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/material-dashboard)
-[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/angular-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/material-dashboard-angular2)
-[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/vue-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/vue-material-dashboard)
-[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/material-dashboard-react)
+[comment]: <> (* [Versions]&#40;#versions&#41;)
 
-| HTML | Angular | Vue | React |
-| --- | --- | --- | --- |
-| [![Material Dashboard HTML](https://github.com/creativetimofficial/public-assets/blob/master/material-dashboard-html/material-dashboard.jpg?raw=true)](https://www.creative-tim.com/product/material-dashboard) | [![Material Dashboard Angular](https://github.com/creativetimofficial/public-assets/blob/master/material-dashboard-angular/material-dashboard-angular.jpg?raw=true)](https://www.creative-tim.com/product/material-dashboard-angular2) | [![Vue Material Dashboard ](https://github.com/creativetimofficial/public-assets/blob/master/vue-material-dashboard/vue-material-dashboard.jpg?raw=true)](https://www.creative-tim.com/product/vue-material-dashboard) | [![Material Dashboard React](https://github.com/creativetimofficial/public-assets/blob/master/material-dashboard-react/material-dashboard-react.jpg?raw=true)](https://www.creative-tim.com/product/material-dashboard-react)
+[comment]: <> (* [Demo]&#40;#demo&#41;)
 
-## Demo
+[comment]: <> (* [Quick Start]&#40;#quick-start&#41;)
 
-| Dashboard | User Profile | Tables | Icons | Notifications |
-| --- | --- | --- | --- | --- |
-| [![Start page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-dashboard-angular/dashboard.png?raw=true)](https://demos.creative-tim.com/material-dashboard-angular2/#/dashboard) | [![User profile page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-dashboard-angular/user-profile.png?raw=true)](https://demos.creative-tim.com/material-dashboard-angular2/#/user-profile) | [![Tables page ](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-dashboard-angular/tables.png?raw=true)](https://demos.creative-tim.com/material-dashboard-angular2/#/table-list) | [![Icons Page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-dashboard-angular/icons.png?raw=true)](https://demos.creative-tim.com/material-dashboard-angular2/#/maps) | [![Notifications page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-dashboard-angular/notifications.png?raw=true)](https://demos.creative-tim.com/material-dashboard-angular2/#/notifications)
+[comment]: <> (* [Documentation]&#40;#documentation&#41;)
 
-[View More](https://demos.creative-tim.com/material-dashboard-angular2/#/dashboard).
+[comment]: <> (* [File Structure]&#40;#file-structure&#41;)
 
-## Quick start
+[comment]: <> (* [Browser Support]&#40;#browser-support&#41;)
 
-Quick start options:
+[comment]: <> (* [Resources]&#40;#resources&#41;)
 
-- [Download from Github](https://github.com/tiniestory/material-dashboard-angular2/archive/master.zip).
-- [Download from Creative Tim](http://www.creative-tim.com/product/material-dashboard-angular2).
+[comment]: <> (* [Reporting Issues]&#40;#reporting-issues&#41;)
 
-## Terminal Commands
+[comment]: <> (* [Technical Support or Questions]&#40;#technical-support-or-questions&#41;)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0 and angular 4.x.
+[comment]: <> (* [Licensing]&#40;#licensing&#41;)
 
-1. Install NodeJs from [NodeJs Official Page](https://nodejs.org/en).
-2. Open Terminal
-3. Go to your file project
-4. Make sure you have installed [Angular CLI](https://github.com/angular/angular-cli) already. If not, please install.
-5. Run in terminal: ```npm install```
-6. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-### What's included
-
-Within the download you'll find the following directories and files:
-
-```
-material-dashboard-angular
-├── CHANGELOG.md
-├── LICENSE.md
-├── README.md
-├── angular-cli.json
-├── documentation
-├── e2e
-├── karma.conf.js
-├── package-lock.json
-├── package.json
-├── protractor.conf.js
-├── src
-│   ├── app
-│   │   ├── app.component.css
-│   │   ├── app.component.html
-│   │   ├── app.component.spec.ts
-│   │   ├── app.component.ts
-│   │   ├── app.module.ts
-│   │   ├── app.routing.ts
-│   │   ├── components
-│   │   │   ├── components.module.ts
-│   │   │   ├── footer
-│   │   │   │   ├── footer.component.css
-│   │   │   │   ├── footer.component.html
-│   │   │   │   ├── footer.component.spec.ts
-│   │   │   │   └── footer.component.ts
-│   │   │   ├── navbar
-│   │   │   │   ├── navbar.component.css
-│   │   │   │   ├── navbar.component.html
-│   │   │   │   ├── navbar.component.spec.ts
-│   │   │   │   └── navbar.component.ts
-│   │   │   └── sidebar
-│   │   │       ├── sidebar.component.css
-│   │   │       ├── sidebar.component.html
-│   │   │       ├── sidebar.component.spec.ts
-│   │   │       └── sidebar.component.ts
-│   │   ├── dashboard
-│   │   │   ├── dashboard.component.css
-│   │   │   ├── dashboard.component.html
-│   │   │   ├── dashboard.component.spec.ts
-│   │   │   └── dashboard.component.ts
-│   │   ├── icons
-│   │   │   ├── icons.component.css
-│   │   │   ├── icons.component.html
-│   │   │   ├── icons.component.spec.ts
-│   │   │   └── icons.component.ts
-│   │   ├── layouts
-│   │   │   └── admin-layout
-│   │   │       ├── admin-layout.component.html
-│   │   │       ├── admin-layout.component.scss
-│   │   │       ├── admin-layout.component.spec.ts
-│   │   │       ├── admin-layout.component.ts
-│   │   │       ├── admin-layout.module.ts
-│   │   │       └── admin-layout.routing.ts
-│   │   ├── maps
-│   │   │   ├── maps.component.css
-│   │   │   ├── maps.component.html
-│   │   │   ├── maps.component.spec.ts
-│   │   │   └── maps.component.ts
-│   │   ├── notifications
-│   │   │   ├── notifications.component.css
-│   │   │   ├── notifications.component.html
-│   │   │   ├── notifications.component.spec.ts
-│   │   │   └── notifications.component.ts
-│   │   ├── table-list
-│   │   │   ├── table-list.component.css
-│   │   │   ├── table-list.component.html
-│   │   │   ├── table-list.component.spec.ts
-│   │   │   └── table-list.component.ts
-│   │   ├── typography
-│   │   │   ├── typography.component.css
-│   │   │   ├── typography.component.html
-│   │   │   ├── typography.component.spec.ts
-│   │   │   └── typography.component.ts
-│   │   ├── upgrade
-│   │   │   ├── upgrade.component.css
-│   │   │   ├── upgrade.component.html
-│   │   │   ├── upgrade.component.spec.ts
-│   │   │   └── upgrade.component.ts
-│   │   └── user-profile
-│   │       ├── user-profile.component.css
-│   │       ├── user-profile.component.html
-│   │       ├── user-profile.component.spec.ts
-│   │       └── user-profile.component.ts
-│   ├── assets
-│   │   ├── css
-│   │   │   └── demo.css
-│   │   ├── img
-│   │   └── scss
-│   │       ├── core
-│   │       └── material-dashboard.scss
-│   ├── environments
-│   ├── favicon.ico
-│   ├── index.html
-│   ├── main.ts
-│   ├── polyfills.ts
-│   ├── styles.css
-│   ├── test.ts
-│   ├── tsconfig.app.json
-│   ├── tsconfig.spec.json
-│   └── typings.d.ts
-├── tsconfig.json
-├── tslint.json
-└── typings
-
-```
-
-## Browser Support
-
-At present, we officially aim to support the last two versions of the following browsers:
-
-<img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
+[comment]: <> (* [Useful Links]&#40;#useful-links&#41;)
 
 
+[comment]: <> (## Versions)
 
-## Resources
-- Demo: <https://demos.creative-tim.com/material-dashboard-angular2/#/dashboard>
-- Download Page: <https://www.creative-tim.com/product/material-dashboard-angular2>
-- Documentation: <https://demos.creative-tim.com/material-dashboard-angular2/#/documentation/tutorial>
-- License Agreement: <https://www.creative-tim.com/license>
-- Support: <https://www.creative-tim.com/contact-us>
-- Issues: [Github Issues Page](https://github.com/creativetimofficial/material-dashboard-angular2/issues)
-- [Material Kit](https://www.creative-tim.com/product/material-kit?ref=github-mda-free) - For Front End Development
+[comment]: <> ([<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/html-logo.jpg?raw=true" width="60" height="60" />]&#40;https://www.creative-tim.com/product/material-dashboard&#41;)
 
-## Reporting Issues
+[comment]: <> ([<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/angular-logo.jpg?raw=true" width="60" height="60" />]&#40;https://www.creative-tim.com/product/material-dashboard-angular2&#41;)
 
-We use GitHub Issues as the official bug tracker for the Material Dashboard. Here are some advices for our users that want to report an issue:
+[comment]: <> ([<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/vue-logo.jpg?raw=true" width="60" height="60" />]&#40;https://www.creative-tim.com/product/vue-material-dashboard&#41;)
 
-1. Make sure that you are using the latest version of the Material Dashboard. Check the CHANGELOG from your dashboard on our [website](https://www.creative-tim.com/).
-2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
-3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
+[comment]: <> ([<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-logo.jpg?raw=true" width="60" height="60" />]&#40;https://www.creative-tim.com/product/material-dashboard-react&#41;)
+
+[comment]: <> (| HTML | Angular | Vue | React |)
+
+[comment]: <> (| --- | --- | --- | --- |)
+
+[comment]: <> (| [![Material Dashboard HTML]&#40;https://github.com/creativetimofficial/public-assets/blob/master/material-dashboard-html/material-dashboard.jpg?raw=true&#41;]&#40;https://www.creative-tim.com/product/material-dashboard&#41; | [![Material Dashboard Angular]&#40;https://github.com/creativetimofficial/public-assets/blob/master/material-dashboard-angular/material-dashboard-angular.jpg?raw=true&#41;]&#40;https://www.creative-tim.com/product/material-dashboard-angular2&#41; | [![Vue Material Dashboard ]&#40;https://github.com/creativetimofficial/public-assets/blob/master/vue-material-dashboard/vue-material-dashboard.jpg?raw=true&#41;]&#40;https://www.creative-tim.com/product/vue-material-dashboard&#41; | [![Material Dashboard React]&#40;https://github.com/creativetimofficial/public-assets/blob/master/material-dashboard-react/material-dashboard-react.jpg?raw=true&#41;]&#40;https://www.creative-tim.com/product/material-dashboard-react&#41;)
+
+[comment]: <> (## Demo)
+
+[comment]: <> (| Dashboard | User Profile | Tables | Icons | Notifications |)
+
+[comment]: <> (| --- | --- | --- | --- | --- |)
+
+[comment]: <> (| [![Start page]&#40;https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-dashboard-angular/dashboard.png?raw=true&#41;]&#40;https://demos.creative-tim.com/material-dashboard-angular2/#/dashboard&#41; | [![User profile page]&#40;https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-dashboard-angular/user-profile.png?raw=true&#41;]&#40;https://demos.creative-tim.com/material-dashboard-angular2/#/user-profile&#41; | [![Tables page ]&#40;https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-dashboard-angular/tables.png?raw=true&#41;]&#40;https://demos.creative-tim.com/material-dashboard-angular2/#/table-list&#41; | [![Icons Page]&#40;https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-dashboard-angular/icons.png?raw=true&#41;]&#40;https://demos.creative-tim.com/material-dashboard-angular2/#/maps&#41; | [![Notifications page]&#40;https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-dashboard-angular/notifications.png?raw=true&#41;]&#40;https://demos.creative-tim.com/material-dashboard-angular2/#/notifications&#41;)
+
+[comment]: <> ([View More]&#40;https://demos.creative-tim.com/material-dashboard-angular2/#/dashboard&#41;.)
+
+[comment]: <> (## Quick start)
+
+[comment]: <> (Quick start options:)
+
+[comment]: <> (- [Download from Github]&#40;https://github.com/tiniestory/material-dashboard-angular2/archive/master.zip&#41;.)
+
+[comment]: <> (- [Download from Creative Tim]&#40;http://www.creative-tim.com/product/material-dashboard-angular2&#41;.)
+
+[comment]: <> (## Terminal Commands)
+
+[comment]: <> (This project was generated with [Angular CLI]&#40;https://github.com/angular/angular-cli&#41; version 1.0.0 and angular 4.x.)
+
+[comment]: <> (1. Install NodeJs from [NodeJs Official Page]&#40;https://nodejs.org/en&#41;.)
+
+[comment]: <> (2. Open Terminal)
+
+[comment]: <> (3. Go to your file project)
+
+[comment]: <> (4. Make sure you have installed [Angular CLI]&#40;https://github.com/angular/angular-cli&#41; already. If not, please install.)
+
+[comment]: <> (5. Run in terminal: ```npm install```)
+
+[comment]: <> (6. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.)
+
+[comment]: <> (To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README]&#40;https://github.com/angular/angular-cli/blob/master/README.md&#41;.)
+
+[comment]: <> (### What's included)
+
+[comment]: <> (Within the download you'll find the following directories and files:)
+
+[comment]: <> (```)
+
+[comment]: <> (material-dashboard-angular)
+
+[comment]: <> (├── CHANGELOG.md)
+
+[comment]: <> (├── LICENSE.md)
+
+[comment]: <> (├── README.md)
+
+[comment]: <> (├── angular-cli.json)
+
+[comment]: <> (├── documentation)
+
+[comment]: <> (├── e2e)
+
+[comment]: <> (├── karma.conf.js)
+
+[comment]: <> (├── package-lock.json)
+
+[comment]: <> (├── package.json)
+
+[comment]: <> (├── protractor.conf.js)
+
+[comment]: <> (├── src)
+
+[comment]: <> (│   ├── app)
+
+[comment]: <> (│   │   ├── app.component.css)
+
+[comment]: <> (│   │   ├── app.component.html)
+
+[comment]: <> (│   │   ├── app.component.spec.ts)
+
+[comment]: <> (│   │   ├── app.component.ts)
+
+[comment]: <> (│   │   ├── app.module.ts)
+
+[comment]: <> (│   │   ├── app.routing.ts)
+
+[comment]: <> (│   │   ├── components)
+
+[comment]: <> (│   │   │   ├── components.module.ts)
+
+[comment]: <> (│   │   │   ├── footer)
+
+[comment]: <> (│   │   │   │   ├── footer.component.css)
+
+[comment]: <> (│   │   │   │   ├── footer.component.html)
+
+[comment]: <> (│   │   │   │   ├── footer.component.spec.ts)
+
+[comment]: <> (│   │   │   │   └── footer.component.ts)
+
+[comment]: <> (│   │   │   ├── navbar)
+
+[comment]: <> (│   │   │   │   ├── navbar.component.css)
+
+[comment]: <> (│   │   │   │   ├── navbar.component.html)
+
+[comment]: <> (│   │   │   │   ├── navbar.component.spec.ts)
+
+[comment]: <> (│   │   │   │   └── navbar.component.ts)
+
+[comment]: <> (│   │   │   └── sidebar)
+
+[comment]: <> (│   │   │       ├── sidebar.component.css)
+
+[comment]: <> (│   │   │       ├── sidebar.component.html)
+
+[comment]: <> (│   │   │       ├── sidebar.component.spec.ts)
+
+[comment]: <> (│   │   │       └── sidebar.component.ts)
+
+[comment]: <> (│   │   ├── dashboard)
+
+[comment]: <> (│   │   │   ├── dashboard.component.css)
+
+[comment]: <> (│   │   │   ├── dashboard.component.html)
+
+[comment]: <> (│   │   │   ├── dashboard.component.spec.ts)
+
+[comment]: <> (│   │   │   └── dashboard.component.ts)
+
+[comment]: <> (│   │   ├── icons)
+
+[comment]: <> (│   │   │   ├── icons.component.css)
+
+[comment]: <> (│   │   │   ├── icons.component.html)
+
+[comment]: <> (│   │   │   ├── icons.component.spec.ts)
+
+[comment]: <> (│   │   │   └── icons.component.ts)
+
+[comment]: <> (│   │   ├── layouts)
+
+[comment]: <> (│   │   │   └── admin-layout)
+
+[comment]: <> (│   │   │       ├── admin-layout.component.html)
+
+[comment]: <> (│   │   │       ├── admin-layout.component.scss)
+
+[comment]: <> (│   │   │       ├── admin-layout.component.spec.ts)
+
+[comment]: <> (│   │   │       ├── admin-layout.component.ts)
+
+[comment]: <> (│   │   │       ├── admin-layout.module.ts)
+
+[comment]: <> (│   │   │       └── admin-layout.routing.ts)
+
+[comment]: <> (│   │   ├── maps)
+
+[comment]: <> (│   │   │   ├── maps.component.css)
+
+[comment]: <> (│   │   │   ├── maps.component.html)
+
+[comment]: <> (│   │   │   ├── maps.component.spec.ts)
+
+[comment]: <> (│   │   │   └── maps.component.ts)
+
+[comment]: <> (│   │   ├── notifications)
+
+[comment]: <> (│   │   │   ├── notifications.component.css)
+
+[comment]: <> (│   │   │   ├── notifications.component.html)
+
+[comment]: <> (│   │   │   ├── notifications.component.spec.ts)
+
+[comment]: <> (│   │   │   └── notifications.component.ts)
+
+[comment]: <> (│   │   ├── table-list)
+
+[comment]: <> (│   │   │   ├── table-list.component.css)
+
+[comment]: <> (│   │   │   ├── table-list.component.html)
+
+[comment]: <> (│   │   │   ├── table-list.component.spec.ts)
+
+[comment]: <> (│   │   │   └── table-list.component.ts)
+
+[comment]: <> (│   │   ├── typography)
+
+[comment]: <> (│   │   │   ├── typography.component.css)
+
+[comment]: <> (│   │   │   ├── typography.component.html)
+
+[comment]: <> (│   │   │   ├── typography.component.spec.ts)
+
+[comment]: <> (│   │   │   └── typography.component.ts)
+
+[comment]: <> (│   │   ├── upgrade)
+
+[comment]: <> (│   │   │   ├── upgrade.component.css)
+
+[comment]: <> (│   │   │   ├── upgrade.component.html)
+
+[comment]: <> (│   │   │   ├── upgrade.component.spec.ts)
+
+[comment]: <> (│   │   │   └── upgrade.component.ts)
+
+[comment]: <> (│   │   └── user-profile)
+
+[comment]: <> (│   │       ├── user-profile.component.css)
+
+[comment]: <> (│   │       ├── user-profile.component.html)
+
+[comment]: <> (│   │       ├── user-profile.component.spec.ts)
+
+[comment]: <> (│   │       └── user-profile.component.ts)
+
+[comment]: <> (│   ├── assets)
+
+[comment]: <> (│   │   ├── css)
+
+[comment]: <> (│   │   │   └── demo.css)
+
+[comment]: <> (│   │   ├── img)
+
+[comment]: <> (│   │   └── scss)
+
+[comment]: <> (│   │       ├── core)
+
+[comment]: <> (│   │       └── material-dashboard.scss)
+
+[comment]: <> (│   ├── environments)
+
+[comment]: <> (│   ├── favicon.ico)
+
+[comment]: <> (│   ├── index.html)
+
+[comment]: <> (│   ├── main.ts)
+
+[comment]: <> (│   ├── polyfills.ts)
+
+[comment]: <> (│   ├── styles.css)
+
+[comment]: <> (│   ├── test.ts)
+
+[comment]: <> (│   ├── tsconfig.app.json)
+
+[comment]: <> (│   ├── tsconfig.spec.json)
+
+[comment]: <> (│   └── typings.d.ts)
+
+[comment]: <> (├── tsconfig.json)
+
+[comment]: <> (├── tslint.json)
+
+[comment]: <> (└── typings)
+
+[comment]: <> (```)
+
+[comment]: <> (## Browser Support)
+
+[comment]: <> (At present, we officially aim to support the last two versions of the following browsers:)
+
+[comment]: <> (<img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">)
 
 
-## Technical Support or Questions
 
-If you have questions or need help integrating the product please [contact us](https://www.creative-tim.com/contact-us) instead of opening an issue.
+[comment]: <> (## Resources)
+
+[comment]: <> (- Demo: <https://demos.creative-tim.com/material-dashboard-angular2/#/dashboard>)
+
+[comment]: <> (- Download Page: <https://www.creative-tim.com/product/material-dashboard-angular2>)
+
+[comment]: <> (- Documentation: <https://demos.creative-tim.com/material-dashboard-angular2/#/documentation/tutorial>)
+
+[comment]: <> (- License Agreement: <https://www.creative-tim.com/license>)
+
+[comment]: <> (- Support: <https://www.creative-tim.com/contact-us>)
+
+[comment]: <> (- Issues: [Github Issues Page]&#40;https://github.com/creativetimofficial/material-dashboard-angular2/issues&#41;)
+
+[comment]: <> (- [Material Kit]&#40;https://www.creative-tim.com/product/material-kit?ref=github-mda-free&#41; - For Front End Development)
+
+[comment]: <> (## Reporting Issues)
+
+[comment]: <> (We use GitHub Issues as the official bug tracker for the Material Dashboard. Here are some advices for our users that want to report an issue:)
+
+[comment]: <> (1. Make sure that you are using the latest version of the Material Dashboard. Check the CHANGELOG from your dashboard on our [website]&#40;https://www.creative-tim.com/&#41;.)
+
+[comment]: <> (2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.)
+
+[comment]: <> (3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.)
+
+
+[comment]: <> (## Technical Support or Questions)
+
+[comment]: <> (If you have questions or need help integrating the product please [contact us]&#40;https://www.creative-tim.com/contact-us&#41; instead of opening an issue.)
 
 
 
-## Licensing
+[comment]: <> (## Licensing)
 
-- Copyright 2018 Creative Tim (https://www.creative-tim.com/)
+[comment]: <> (- Copyright 2018 Creative Tim &#40;https://www.creative-tim.com/&#41;)
 
-- Licensed under MIT (https://github.com/creativetimofficial/material-dashboard-angular2/blob/master/LICENSE.md)
+[comment]: <> (- Licensed under MIT &#40;https://github.com/creativetimofficial/material-dashboard-angular2/blob/master/LICENSE.md&#41;)
 
 
-## Useful Links
+[comment]: <> (## Useful Links)
 
-- [More products](https://www.creative-tim.com/bootstrap-themes) from Creative Tim
-- [Tutorials](https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w)
-- [Freebies](https://www.creative-tim.com/bootstrap-themes/free) from Creative Tim
-- [Affiliate Program](https://www.creative-tim.com/affiliates/new) (earn money)
+[comment]: <> (- [More products]&#40;https://www.creative-tim.com/bootstrap-themes&#41; from Creative Tim)
 
-##### Social Media
+[comment]: <> (- [Tutorials]&#40;https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w&#41;)
 
-Twitter: <https://twitter.com/CreativeTim>
+[comment]: <> (- [Freebies]&#40;https://www.creative-tim.com/bootstrap-themes/free&#41; from Creative Tim)
 
-Facebook: <https://www.facebook.com/CreativeTim>
+[comment]: <> (- [Affiliate Program]&#40;https://www.creative-tim.com/affiliates/new&#41; &#40;earn money&#41;)
 
-Dribbble: <https://dribbble.com/creativetim>
+[comment]: <> (##### Social Media)
 
-Google+: <https://plus.google.com/+CreativetimPage>
+[comment]: <> (Twitter: <https://twitter.com/CreativeTim>)
 
-Instagram: <https://www.instagram.com/CreativeTimOfficial>
+[comment]: <> (Facebook: <https://www.facebook.com/CreativeTim>)
 
-[CHANGELOG]: ./CHANGELOG.md
+[comment]: <> (Dribbble: <https://dribbble.com/creativetim>)
 
-[version-badge]: https://img.shields.io/badge/version-2.6.0-blue.svg
+[comment]: <> (Google+: <https://plus.google.com/+CreativetimPage>)
+
+[comment]: <> (Instagram: <https://www.instagram.com/CreativeTimOfficial>)
+
+[comment]: <> ([CHANGELOG]: ./CHANGELOG.md)
+
+[comment]: <> ([version-badge]: https://img.shields.io/badge/version-2.6.0-blue.svg)
