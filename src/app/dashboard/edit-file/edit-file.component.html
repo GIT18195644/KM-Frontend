@@ -1,5 +1,3 @@
-
-
 <form [formGroup]="editFileForm" (ngSubmit)="onEditFile()">
     <div class="card-header card-header-warning mb-3">
         <h4 class="card-title">Edit Document Stats</h4>
@@ -7,53 +5,43 @@
     <div class="row">
         <div class="col-md-6">
             <mat-form-field class="example-full-width">
-                <input matInput placeholder="ID" type="text"
-                       required>
+                <input matInput placeholder="Doc ID" value="{{ID}}" type="text" readonly>
             </mat-form-field>
         </div>
         <div class="col-md-6">
             <mat-form-field class="example-full-width">
-                <input matInput placeholder="Topic"
-                       type="text">
+                <input matInput placeholder="Topic" value="{{Topic}}" type="text">
             </mat-form-field>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
             <mat-form-field class="example-full-width">
-                <input matInput placeholder="Abstract" type="text"
-                       required>
+                <input matInput placeholder="Abstract" value="{{Abstract}}" type="text" required>
             </mat-form-field>
         </div>
     </div>
     <div class="row">
         <div class="col-md-6">
             <mat-form-field class="example-full-width">
-                <input matInput placeholder="Author" type="text"
-                       required>
+                <input matInput placeholder="Author" value="{{Author}}" type="text" required readonly>
             </mat-form-field>
         </div>
         <div class="col-md-6">
             <mat-form-field class="example-full-width">
-                <input matInput placeholder="Type" type="text"
-                       required>
+                <input matInput placeholder="Category" value="{{Role}}" type="text" required readonly>
             </mat-form-field>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
             <mat-form-field class="example-full-width">
-                <input matInput placeholder="Link" type="text"
-                       required>
+                <input matInput placeholder="Link" value="{{Link}}" type="text" required>
             </mat-form-field>
         </div>
     </div>
-    <button (click)="onUpdateFile()"
-            mat-raised-button
-            type="submit"
-            class="btn btn-danger pull-right">
-        Update
+    <button (click)="onUpdateFile()" mat-raised-button type="submit" class="btn btn-danger pull-right">
+        Update Details
     </button>
     <div class="clearfix"></div>
-
 </form>

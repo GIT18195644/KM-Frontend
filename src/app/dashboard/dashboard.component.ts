@@ -5,9 +5,9 @@ import { ToastrService } from 'ngx-toastr';
 import { fromEvent } from 'rxjs';
 import { map, debounceTime } from 'rxjs/operators';
 import * as moment from 'moment';
-import {AddUserDialogBoxComponent} from '../user/add-user/add-user-dialog-box.component';
-import {MatDialog} from '@angular/material/dialog';
-import {EditFileComponent} from './edit-file/edit-file.component';
+import { AddUserDialogBoxComponent } from '../user/add-user/add-user-dialog-box.component';
+import { MatDialog } from '@angular/material/dialog';
+import { EditFileComponent } from './edit-file/edit-file.component';
 
 
 @Component({
@@ -28,7 +28,7 @@ export class DashboardComponent implements OnInit {
   public temp = [];
 
   constructor(public sharepointService: SharePointService, private toastr: ToastrService,
-              public dialog: MatDialog) { }
+    public dialog: MatDialog) { }
 
   startAnimationForLineChart(chart) {
     let seq: any, delays: any, durations: any;
@@ -188,9 +188,9 @@ export class DashboardComponent implements OnInit {
     window.open(link);
   }
 
-    onEditDocument() {
+  onEditDocument() {
 
-    }
+  }
   ngAfterViewInit(): void {
     fromEvent(this.search.nativeElement, 'keydown')
       .pipe(
@@ -230,13 +230,22 @@ export class DashboardComponent implements OnInit {
     this.table.offset = 0;
   }
 
-  EditFile(row) {
+  EditFile(row): void {
     const matDialogRef = this.dialog.open(EditFileComponent, {
       width: '900px',
+      data: {
+        ID: row.Id,
+        Topic: row.Topic,
+        Abstract: row.Abstract,
+        Author: row.Author,
+        Role: row.RoleName,
+        Link: row.Link
+      }
     });
   }
 
-  DeleteFile(row) {
+  DeleteFile(row): void {
     // Delete pop-up window code
+    this.toastr.success("Shared File: " + row.Id + " delete successfully", 'Success');
   }
 }
