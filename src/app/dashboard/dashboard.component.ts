@@ -223,4 +223,11 @@ export class DashboardComponent implements OnInit {
     this.table.offset = 0;
   }
 
+  EditFile(row) {
+    // Edit pop-up window code
+  }
+
+  DeleteFile(row) {
+    // Delete pop-up window code
+  }
 }
