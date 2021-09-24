@@ -5,6 +5,9 @@ import { ToastrService } from 'ngx-toastr';
 import { fromEvent } from 'rxjs';
 import { map, debounceTime } from 'rxjs/operators';
 import * as moment from 'moment';
+import {AddUserDialogBoxComponent} from '../user/add-user/add-user-dialog-box.component';
+import {MatDialog} from '@angular/material/dialog';
+import {EditFileComponent} from './edit-file/edit-file.component';
 
 
 @Component({
@@ -24,7 +27,8 @@ export class DashboardComponent implements OnInit {
   public rows = [];
   public temp = [];
 
-  constructor(public sharepointService: SharePointService, private toastr: ToastrService) { }
+  constructor(public sharepointService: SharePointService, private toastr: ToastrService,
+              public dialog: MatDialog) { }
 
   startAnimationForLineChart(chart) {
     let seq: any, delays: any, durations: any;
@@ -184,6 +188,9 @@ export class DashboardComponent implements OnInit {
     window.open(link);
   }
 
+    onEditDocument() {
+
+    }
   ngAfterViewInit(): void {
     fromEvent(this.search.nativeElement, 'keydown')
       .pipe(
@@ -224,7 +231,9 @@ export class DashboardComponent implements OnInit {
   }
 
   EditFile(row) {
-    // Edit pop-up window code
+    const matDialogRef = this.dialog.open(EditFileComponent, {
+      width: '900px',
+    });
   }
 
   DeleteFile(row) {

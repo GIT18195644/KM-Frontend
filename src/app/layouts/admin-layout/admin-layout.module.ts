@@ -23,6 +23,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {UserComponent} from '../../user/user.component';
 import {AddUserDialogBoxComponent} from '../../user/add-user/add-user-dialog-box.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import {EditFileComponent} from '../../dashboard/edit-file/edit-file.component';
 
 
 @NgModule({
@@ -53,6 +54,7 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
         ChangePasswordDialogBoxComponent,
         UserComponent,
         AddUserDialogBoxComponent,
+        EditFileComponent,
     ]
 })
 

@@ -1,10 +1,10 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { AddUserDialogBoxComponent } from './add-user/add-user-dialog-box.component';
-import { UserProfileService } from '../shared/Services/user-profile.service';
-import { ToastrService } from 'ngx-toastr';
-import { fromEvent } from 'rxjs';
-import { map, debounceTime } from 'rxjs/operators';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
+import {AddUserDialogBoxComponent} from './add-user/add-user-dialog-box.component';
+import {UserProfileService} from '../shared/Services/user-profile.service';
+import {ToastrService} from 'ngx-toastr';
+import {fromEvent} from 'rxjs';
+import {map, debounceTime} from 'rxjs/operators';
 import * as moment from 'moment';
 
 @Component({
@@ -14,7 +14,7 @@ import * as moment from 'moment';
 })
 export class UserComponent implements OnInit {
     @ViewChild('myTable') table;
-    @ViewChild('search', { static: false }) search: any;
+    @ViewChild('search', {static: false}) search: any;
 
 
     // errors fixing
@@ -54,7 +54,7 @@ export class UserComponent implements OnInit {
     }
 
     DeleteUser(row) {
-        this.toastr.success("User deleted successfully", 'Success');
+        this.toastr.success('User deleted successfully', 'Success');
     }
 
     ngAfterViewInit(): void {
@@ -85,7 +85,8 @@ export class UserComponent implements OnInit {
                     }
                 } else {
                     // check for a match
-                    if ((item[keys[i]] && moment(item[keys[i]]).format('DD-MM-YYYY').toString().toLowerCase().indexOf(value) !== -1) || !value) {
+                    if ((item[keys[i]] && moment(item[keys[i]])
+                        .format('DD-MM-YYYY').toString().toLowerCase().indexOf(value) !== -1) || !value) {
                         // found match, return true to add to result set
                         return true;
                     }
