@@ -3,6 +3,9 @@ import { MatDialog } from '@angular/material/dialog';
 import { AddUserDialogBoxComponent } from './add-user/add-user-dialog-box.component';
 import { UserProfileService } from '../shared/Services/user-profile.service';
 import { ToastrService } from 'ngx-toastr';
+import { fromEvent } from 'rxjs';
+import { map, debounceTime } from 'rxjs/operators';
+import * as moment from 'moment';
 
 @Component({
     selector: 'app-user',
@@ -11,6 +14,9 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class UserComponent implements OnInit {
     @ViewChild('myTable') table;
+    @ViewChild('search', { static: false }) search: any;
+
+
     // errors fixing
     pageSize: any;
     rowCount: any;
@@ -49,5 +55,44 @@ export class UserComponent implements OnInit {
 
     DeleteUser(row) {
         this.toastr.success("User deleted successfully", 'Success');
+    }
+
+    ngAfterViewInit(): void {
+        fromEvent(this.search.nativeElement, 'keydown')
+            .pipe(
+                debounceTime(550),
+                map(x => {
+                    return x['target']['value']
+                })
+            )
+            .subscribe(value => {
+                this.updateFilter(value);
+            });
+    }
+
+    updateFilter(val: any) {
+        const value = val.toString().toLowerCase().trim();
+        const count = 15;
+        const keys = Object.keys(this.temp[0]);
+        this.rows = this.temp.filter(item => {
+            for (let i = 0; i < count; i++) {
+                debugger;
+                if (i != 5) {
+                    // check for a match
+                    if ((item[keys[i]] && item[keys[i]].toString().toLowerCase().indexOf(value) !== -1) || !value) {
+                        // found match, return true to add to result set
+                        return true;
+                    }
+                } else {
+                    // check for a match
+                    if ((item[keys[i]] && moment(item[keys[i]]).format('DD-MM-YYYY').toString().toLowerCase().indexOf(value) !== -1) || !value) {
+                        // found match, return true to add to result set
+                        return true;
+                    }
+                }
+            }
+        });
+
+        this.table.offset = 0;
     }
 }

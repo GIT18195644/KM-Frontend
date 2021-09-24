@@ -2,6 +2,10 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import * as Chartist from 'chartist';
 import { SharePointService } from '../shared/Services/share-point.service';
 import { ToastrService } from 'ngx-toastr';
+import { fromEvent } from 'rxjs';
+import { map, debounceTime } from 'rxjs/operators';
+import * as moment from 'moment';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -10,6 +14,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class DashboardComponent implements OnInit {
   @ViewChild('myTable') table;
+  @ViewChild('search', { static: false }) search: any;
 
   public role: any;
   public userId: any;
@@ -177,6 +182,45 @@ export class DashboardComponent implements OnInit {
     this.toastr.success("Download successfully", 'Success');
 
     window.open(link);
+  }
+
+  ngAfterViewInit(): void {
+    fromEvent(this.search.nativeElement, 'keydown')
+      .pipe(
+        debounceTime(550),
+        map(x => {
+          return x['target']['value']
+        })
+      )
+      .subscribe(value => {
+        this.updateFilter(value);
+      });
+  }
+
+  updateFilter(val: any) {
+    const value = val.toString().toLowerCase().trim();
+    const count = 15;
+    const keys = Object.keys(this.temp[0]);
+    this.rows = this.temp.filter(item => {
+      for (let i = 0; i < count; i++) {
+        debugger;
+        if (i != 5) {
+          // check for a match
+          if ((item[keys[i]] && item[keys[i]].toString().toLowerCase().indexOf(value) !== -1) || !value) {
+            // found match, return true to add to result set
+            return true;
+          }
+        } else {
+          // check for a match
+          if ((item[keys[i]] && moment(item[keys[i]]).format('DD-MM-YYYY').toString().toLowerCase().indexOf(value) !== -1) || !value) {
+            // found match, return true to add to result set
+            return true;
+          }
+        }
+      }
+    });
+
+    this.table.offset = 0;
   }
 
 }

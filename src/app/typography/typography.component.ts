@@ -14,6 +14,8 @@ export class TypographyComponent implements OnInit {
   rows = [];
 
   public form: FormGroup;
+  public form2: FormGroup;
+
   public role: any;
   public userId: any;
   public spFile: any;
@@ -23,6 +25,13 @@ export class TypographyComponent implements OnInit {
 
   constructor(public fb: FormBuilder, private toastr: ToastrService, public loginService: LoginService, public sharepointService: SharePointService) {
     this.form = this.fb.group({
+      ctrltopic: [null, [Validators.required]],
+      ctrlrole: [null, [Validators.required]],
+      ctrlabstract: [null, [Validators.required]],
+      ctrlattachedfile: [null, [Validators.required]]
+    });
+
+    this.form2 = this.fb.group({
       ctrltopic: [null, [Validators.required]],
       ctrlrole: [null, [Validators.required]],
       ctrlabstract: [null, [Validators.required]],
@@ -100,25 +109,24 @@ export class TypographyComponent implements OnInit {
     this.toastr.success('File Sharing Success', 'Success');
   }
 
-  public ShareData(value): void {
-    // console.log('data2', value);
+  public ShareData(value: any): void {
+    // console.log('data 2', value);
     this.sharepointService.addnewsharedata(value, this.userId).subscribe((data: any) => {
 
       console.log("MSG: ", data.ReturnMsg)
       if (data.ReturnMsg == "Document created successfully") {
         this.openSnackBarSuccess();
         this.form.reset();
+        this.form2.reset();
       } else {
         this.openSnackBarfailed();
         this.form.reset();
+        this.form2.reset();
       }
     }, (err: HttpErrorResponse) => {
       this.openSnackBarfailed();
       this.form.reset();
     });
-
-    // this.openSnackBarSuccess();
-    // this.form.reset();
   }
 
 }

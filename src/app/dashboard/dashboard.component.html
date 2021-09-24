@@ -73,16 +73,40 @@
 
         <div class="row">
             <div class="col-md-12">
+                <div class="card card-chart">
+                    <div class="card-header card-header-danger">
+                        My Share Point
+                        <!-- <div class="ct-chart" id="dailySalesChart"></div> -->
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Find Now!</h4>
+                        <p class="card-category">
+                            Share Point Data Filter
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Search Shared Files" #search id="search">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header card-header-warning">
+                    <div class="card-header card-header-danger">
                         <h4 class="card-title">Document Stats</h4>
                         <!--                      <p class="card-category">New employees on 15th September, 2021</p>-->
                     </div>
                     <div class="card-body table-responsive">
-                        <ngx-datatable #myTable class="material" class="material" [headerHeight]="50" [limit]="10"
+                        <ngx-datatable #myTable class="bootsrap" class="bootsrap" [headerHeight]="50" [limit]="10"
                             [columnMode]="'force'" [footerHeight]="50" [rowHeight]="75" [rows]="rows"
                             [sorts]="[{prop: 'name', dir: 'desc'}]">
-                            <ngx-datatable-column name="Doc Id" [width]="20">
+                            <ngx-datatable-column name="Doc Id" [width]="10">
                                 <ng-template let-row="row" ngx-datatable-cell-template>
                                     {{row.Id}}
                                 </ng-template>
@@ -97,7 +121,7 @@
                                         {{row.Abstract}}
                                     </ng-template>
                                 </ngx-datatable-column> -->
-                            <ngx-datatable-column name="Author">
+                            <ngx-datatable-column name="Author" [width]="25">
                                 <ng-template let-row="row" ngx-datatable-cell-template>
                                     {{row.Author}}
                                 </ng-template>
@@ -107,17 +131,17 @@
                                     {{row.RoleName}}
                                 </ng-template>
                             </ngx-datatable-column>>
-                            <ngx-datatable-column name="Total Downloads">
+                            <!-- <ngx-datatable-column name="Total Downloads" [width]="20">
                                 <ng-template let-row="row" ngx-datatable-cell-template>
                                     {{row.Downloads}}
                                 </ng-template>
-                            </ngx-datatable-column>
-                            <ngx-datatable-column name="Timestamp">
+                            </ngx-datatable-column> -->
+                            <ngx-datatable-column name="Timestamp" [width]="20">
                                 <ng-template let-row="row" ngx-datatable-cell-template>
-                                    {{row.CreatedTime}}
+                                    {{row.CreatedTime | date:'MM/dd/yyyy - h:mma'}}
                                 </ng-template>
                             </ngx-datatable-column>
-                            <ngx-datatable-column name="Status">
+                            <ngx-datatable-column name="Status" [width]="10">
                                 <ng-template let-row="row" ngx-datatable-cell-template>
                                     <span *ngIf="row.Status == 1" class="badge badge-danger">Available</span>
                                     <span *ngIf="row.Status != 1" class="badge badge-dark">Unavailable</span>
@@ -130,8 +154,24 @@
                                             <i class="fa fa-cloud-download" aria-hidden="true"></i>
                                         </button>
                                     </a>
+                                    <a (click)="DownloadFile(row)">
+                                        <button type="button" class="btn btn-sm btn-danger">
+                                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                                        </button>
+                                    </a>
+                                    <a (click)="DownloadFile(row)">
+                                        <button type="button" class="btn btn-sm btn-danger">
+                                            <i class="fa fa-trash" aria-hidden="true"></i>
+                                        </button>
+                                    </a>
                                 </ng-template>
                             </ngx-datatable-column>
+                            <datatable-pager [pagerLeftArrowIcon]="'datatable-icon-left'"
+                                [pagerRightArrowIcon]="'datatable-icon-right'"
+                                [pagerPreviousIcon]="'datatable-icon-prev'" [pagerNextIcon]="'datatable-icon-skip'"
+                                [page]="curPage" [size]="pageSize" [count]="rowCount"
+                                [hidden]="!((rowCount / pageSize) > 1)">
+                            </datatable-pager>
                         </ngx-datatable>
                     </div>
                 </div>

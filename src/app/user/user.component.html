@@ -2,14 +2,41 @@
     <div class="container-fluid">
 
         <div class="row">
-            <div class="m-3">
+            <div class="col-md-12" style="text-align: end;">
                 <button (click)="onAddUser()" mat-raised-button type="submit" class="btn btn-danger">
                     Add User
                 </button>
             </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-chart">
+                    <div class="card-header card-header-danger">
+                        Search User
+                        <!-- <div class="ct-chart" id="dailySalesChart"></div> -->
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Find Now!</h4>
+                        <p class="card-category">
+                            User details Filter
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Search User Details" #search id="search">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header card-header-warning">
+                    <div class="card-header card-header-danger">
                         <h4 class="card-title">Employee Stats</h4>
                     </div>
                     <div class="card-body table-responsive">
