@@ -41,10 +41,6 @@ export class SharePointService {
         this.fileData.Status = 1;
 
         return this.http.post(this.myAppUrl + "ShareFiles/createFile", this.fileData, this.httpOptions)
-            .pipe(map(res =>
-                res),
-                catchError(this.errorHandler)
-            );
     }
 
     getAllSharedFiles(user) {

@@ -103,7 +103,9 @@ export class TypographyComponent implements OnInit {
   public ShareData(value): void {
     // console.log('data2', value);
     this.sharepointService.addnewsharedata(value, this.userId).subscribe((data: any) => {
-      if (data['Result']['ReturnMsg'] == "Document created successfully") {
+
+      console.log("MSG: ", data.ReturnMsg)
+      if (data.ReturnMsg == "Document created successfully") {
         this.openSnackBarSuccess();
         this.form.reset();
       } else {
@@ -114,6 +116,9 @@ export class TypographyComponent implements OnInit {
       this.openSnackBarfailed();
       this.form.reset();
     });
+
+    // this.openSnackBarSuccess();
+    // this.form.reset();
   }
 
 }
